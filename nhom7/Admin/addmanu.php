@@ -1,22 +1,13 @@
 
+   <?php 
+   // <form action="addmanu2.php" method="post">
+   // <input type="text" name="manu_id" id="">
+   // <input type="text" name="manu_name" id="">
+   // <input type="submit" name ="submit" value="">
+   // </form>?>
 
-  <?php
-  /*
-      
-  <form action="addtype.php" method="GET">
-  <label for="">id</label>
-   <input type="text" name="type_id" id="">
-   <label for="">name</label>
-  <input type="text" name="type_name" id="">
-<input type="submit" name ="submit" value="submit">
-  </form>
-  */
-   
-    
-    
 
-?>
-  
+
 <?php include "header.php" ?>
 <?php
 require "models/config.php";
@@ -59,18 +50,18 @@ require "models/manufactures.php";
                 </button>
               </div>
             </div>
-            <form action="addtype.php" method="GET">
+            <form action="addmanu2.php" method="post">
             <div class="card-body">
               <div class="form-group">
-                <label for="inputName">type_id</label>
-             
-                <input type="number" name="type_id" id="" class="form-control">
+                <label for="inputName">Manufacture_Id</label>
+             <input type="number" name="manu_id" id="" class="form-control">
+          
               </div>
              
               <div class="form-group">
 
-                <label for="inputName">Type_Name</label>
-                <input type="text" name="type_name" id="" class="form-control">
+                <label for="inputName">Manufacture_Name</label>
+                <input type="text" name="manu_name" id="" class="form-control">
               </div>
            
             
@@ -88,7 +79,7 @@ require "models/manufactures.php";
       <div class="row">
         <div class="col-12">
         <a href="#" class="btn btn-secondary">Cancel</a>
-          <input type="submit" name= "submit" value="Add Protype" class="btn btn-success float-right">
+          <input type="submit" name= "submit" value="Add Manufacture" class="btn btn-success float-right">
           </form>
         </div>
       </div>

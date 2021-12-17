@@ -9,21 +9,22 @@ $product = new Product;
 $manu = new Manufacture;
 
 $protype = new Protype;
-if(isset($_POST['submit']))
+if(isset($_GET['submit']))
 {
-   $id = $_POST['manu_id'];
-   $name = $_POST['manu_name'];
+   $id = $_GET['type_id'];
+   $name = $_GET['type_name'];
 
- if($manu->addmanufacture($id,$name))
- 
-     echo "Thanh cong";
-     header('location:manufacture.php');
+ if($protype->add($id,$name))
+ {
+     echo "Thanh coong";
+     header('location:protypes.php');
  }
  else
  {
-     echo "Không thành công";
+   echo "Không thành công";
  }
- 
 
- 
- ?>
+ }
+
+
+?>
